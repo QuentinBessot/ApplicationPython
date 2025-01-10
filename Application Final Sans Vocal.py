@@ -114,6 +114,20 @@ class MQTTApp:
                 "send_message_button": "Envoyer le message",
                 "robot_action_button": "Action Robot",
             },
+            "Romanian": {
+                "mqtt_app_title": "Aplicație MQTT",
+                "mqtt_broker_address": "Adresa serverului MQTT:",
+                "mqtt_port": "Port (implicit 1883):",
+                "mqtt_topic": "Subiect:",
+                "mqtt_username": "Nume de utilizator:",
+                "mqtt_password": "Parolă:",
+                "log_title": "Jurnale",
+                "message_label": "Mesaj de trimis:",
+                "message_type_label": "Tipul mesajului:",
+                "connect_button": "Conectează-te",
+                "send_message_button": "Trimite mesajul",
+                "robot_action_button": "Acțiune Robot"
+            },
         }
         return texts[self.language].get(key, key)
 
@@ -483,7 +497,7 @@ def show_language_selection():
         root.mainloop()
 
     tk.Label(lang_window, text="Select Language", font="Helvetica 12 bold").pack(pady=10)
-    language_combobox = ttk.Combobox(lang_window, values=["English", "French"], state="readonly", font="Helvetica 12")
+    language_combobox = ttk.Combobox(lang_window, values=["English", "French","Romanian"], state="readonly", font="Helvetica 12")
     language_combobox.current(0)
     language_combobox.pack(pady=10)
 
